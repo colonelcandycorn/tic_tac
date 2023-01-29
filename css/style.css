@@ -131,9 +131,17 @@ header {
 }
 
 .player-turn > div {
-    border: 5px solid var(--accent-clr);
+    border: 5px solid var(--body-bg);
     padding: 0.5rem 1rem;
     border-radius: 10px;
+}
+
+.player-turn > div.active {
+    border: 5px solid var(--accent-clr);
+}
+
+p.active {
+    color: var(--accent-clr);
 }
 
 .board {
@@ -165,7 +173,7 @@ header {
 }
 
 .box {
-    font-size: 4rem;
+    font-size: 3.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,5 +181,12 @@ header {
 
 .box > p {
     line-height: 0;
+}
+
+#reset {
+    background-color: var(--button-clr);
+    color: var(--font-clr);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
 }
 
