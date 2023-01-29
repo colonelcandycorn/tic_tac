@@ -94,8 +94,7 @@ const Game = () => {
 
     const playTurn = (event) => {
         if (!turn) return;
-
-        let index = parseInt(event.target.id[3]) - 1;
+        let index = (+(event.target.closest('div').id[3]) - 1);
         // if the player clicks the wrong place return else update pos
         if (!board.updatePos(index, turn)) {
             console.log("You clicked an incorrect spot");
@@ -157,4 +156,5 @@ const board = document.querySelector('.board');
 const reset = document.querySelector('#reset');
 const game = Game();
 board.addEventListener('click', e => game.playTurn(e));
+
 reset.addEventListener('click', game.reset);
